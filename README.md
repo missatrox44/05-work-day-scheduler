@@ -38,6 +38,8 @@ Go to deployed website and select timeblock you wish to edit.
 * Styled with [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 * Display date/times provided by [Moment JS](https://momentjs.com/)
 
+## Wireframe
+![wireframe](./assets/images/wireframe.png)<br><br>
 
 ## MIT License
 
