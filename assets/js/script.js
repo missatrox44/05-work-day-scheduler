@@ -8,48 +8,28 @@ $("#currentDay").text(today.format('MMMM Do YYYY, h:mm:ss a'));
 //refresh page and data is still displayed
 
 
-//if time in first column has passed, change to class="past" AND contenteditable="false"
 
 
-// description.attr('class', 'past');
-
-
-//current hour row, change to class="present"
-
-
-//if time in first column has NOT passed, class="future"
-
-// function checkTime() {
-//     var currentTime = moment().hour();
-//     console.log(currentTime);
-//     var h9El = $('#9');
-//     //if statement in loop
-//     if (currentTime == h9El){
-//     $('.description').addClass('present')
-//     } else if(currentTime > h9El){
-//         $('.description').addClass('future')
-//     } else {
-//         $('.description').addClass('past')
-//     }
-// }
-
-
-//loop through each timeblock .hour & comapre to currentTime
+// var textBox = $['#9', '#10', '#11', '#12', '#13', '#14', '#15', '#16', '#17'];
+//function to change color of textarea based on currentTime
+//target IDs instead of class to indiviual check timeblocks
 function checkTime() {
     var currentTime = moment().hour();
     console.log(currentTime);
-    //if statement in loop
-    $('.hour').each(function(i) {
-        if (currentTime === '.hour') {
-    $('.description').addClass('present')
-    } else if(currentTime > '.hour'){
-        $('.description').addClass('future')
-    } else {
-        $('.description').addClass('past')
+    for (var i = 9; i < 18; i++) {
+        if (currentTime === i) {
+            textBox.addClass('present');
+        } else if (currentTime > i) {
+            textBox.addClass('future');
+        } else {
+            textBox.addClass('past');
+        }
     }
-    })};
+};
 
-    checkTime();
+checkTime();
 
-// Time IDs as an array
-// var timeIds = ['9', '10', '11', '12', '1', '2', '3', '4', '5']
+
+// $(#hour-${i}`).addClass('past');`
+
+//need to change 
