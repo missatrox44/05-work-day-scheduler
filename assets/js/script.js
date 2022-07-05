@@ -7,29 +7,27 @@ $("#currentDay").text(today.format('MMMM Do YYYY, h:mm:ss a'));
 //make save column clickable/save middle column data to local storage
 //refresh page and data is still displayed
 
+var textBox = $('.description').toArray();
+console.log(textBox);
 
-
-
-// var textBox = $['#9', '#10', '#11', '#12', '#13', '#14', '#15', '#16', '#17'];
 //function to change color of textarea based on currentTime
-//target IDs instead of class to indiviual check timeblocks
+// console.log(textBox);
 function checkTime() {
     var currentTime = moment().hour();
+    // var textBox = $('.description').toArray();
     console.log(currentTime);
-    for (var i = 9; i < 18; i++) {
-        if (currentTime === i) {
-            textBox.addClass('present');
-        } else if (currentTime > i) {
-            textBox.addClass('future');
+    for (var i = 0; i < textBox.length; i++) {
+        if (currentTime === i+9) {
+            $(textBox[i]).addClass('present');
+        } else if (currentTime < i+9) {
+            $(textBox[i]).addClass('future');
         } else {
-            textBox.addClass('past');
+            $(textBox[i]).addClass('past');
         }
     }
 };
 
 checkTime();
 
-
-// $(#hour-${i}`).addClass('past');`
 
 //need to change 
