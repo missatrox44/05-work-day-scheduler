@@ -22,7 +22,7 @@ All future time blocks will be colored green.<br>
 
 
 ## Second Set of Eyes
-Kurt Bixby
+[Kurt Bixby](https://github.com/kurtbixby)
 
 ## Resources
 
