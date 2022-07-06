@@ -2,7 +2,7 @@
 
 ## Deployed Website
 
-[https://missatrox44.github.io/04-work-day-scheduler](https://missatrox44.github.io/04-work-day-scheduler)
+[https://missatrox44.github.io/simple-work-day-scheduler](https://missatrox44.github.io/simple-work-day-scheduler)
 
 
 Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
@@ -12,7 +12,7 @@ You'll need to use the [Moment.js](https://momentjs.com/) library to work with d
 ## Acceptance Criteria
 * The current day is displayed at the top of the calendar
 * User is presented with timeblocks for standard business hours
-* !!! Each timeblock is color coded to indicated whether it is in the past, present, or future
+* Each timeblock is color coded to indicated whether it is in the past, present, or future
 * User can enter an event when timeblock is clicked into
 * User can click save button for that timeblock 
 * !!! Text saved into local storage
