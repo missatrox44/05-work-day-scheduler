@@ -29,14 +29,30 @@ checkTime();
 var saveBtn = $('.saveBtn');
 
 function storeUserInput (){
-    $('.saveBtn').on('click', function() {
+    $('.saveBtn').on('click', function(evt) {
         console.log('Button Clicked');
-        console.log(textBox.val());
-        localStorage.setItem('userInput', textBox.val());
+        console.log(evt.target.id);
+       let textBoxValue = document.querySelector(`#${evt.target.id}`);
+       textBoxValueId = evt.target.id;
+       let todoObject = {}
+       todoObject[textBoxValueId] = textBoxValue.value
+       console.log(textBoxValue);
+       const currentLocalStorage = JSON.parse(localStorage.getItem('userInput')) || [];
+       currentLocalStorage.push(todoObject);
+        localStorage.setItem('userInput', JSON.stringify(currentLocalStorage));
     })
 }
 
 storeUserInput();
+
+
+
+//function to load local storage
+//if has any items -> loop through array, (queryselector)local storage id = local storage value
+
+// for loop
+// let variable = querySelector ==> localStorageItem.id
+// let variable =querySelector.value ==> localStorageItem.value
 
 
 //refresh page and data is still displayed
@@ -57,3 +73,6 @@ var userText = localStorage.getItem('userInput');
 // Remove All (Clear Local Storage)
 // localStorage.clear();
 
+// Grader Comments:
+// There are some areas of improvement worth mentioning; 
+// Clicking a time block's save button does save the input text to local storage, I can see the input for the 9am time block if I go look in devtools, but the value is not being displayed in the browser. make sure you are adding that save clickevent to all of the buttons, and use setItem to get saved inputs back from localStorage, similarly to how you use getItem to put them there. 
